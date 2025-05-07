@@ -1,0 +1,183 @@
+/* Base Reset and Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', 'Cursive', 'Georgia', serif;
+    background-image: url('Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    color: white;
+    min-height: 100vh;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+}
+
+/* Title Styling */
+.logo-text,
+.aperitive-title,
+.felprincipal-title,
+.deserturi-title,
+.meniu-title,
+.contact-title {
+    font-size: 5rem;
+    color: white;
+    margin: 20px 0;
+}
+
+/* Button Styles */
+button,
+.frontpage-buttons a button,
+.meniu-buttons a button,
+.back-button {
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 200px;
+    text-align: center;
+    margin: 10px auto;
+    display: block;
+}
+
+button:hover,
+.frontpage-buttons a button:hover,
+.meniu-buttons a button:hover,
+.back-button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Universal Page Container Centering */
+.frontpage,
+.meniu-page,
+.aperitive-page,
+.felprincipal-page,
+.deserturi-page,
+.contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Frontpage Specific Layout */
+.frontpage {
+    min-height: 100vh;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Meniu Buttons */
+.meniu-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Image Grids */
+.aperitive-images,
+.felprincipal-images,
+.deserturi-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Row Containers */
+.aperitive-row,
+.felprincipal-row,
+.deserturi-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Unified Image Styling (same size for all) */
+.aperitive-item img,
+.felprincipal-item img,
+.deserturi-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+/* Item Names */
+.aperitive-name,
+.felprincipal-name,
+.deserturi-name,
+.contact-phone {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Divider Line */
+.divider {
+    border: none;
+    border-top: 2px solid white;
+    width: 80%;
+    margin: 50px auto;
+}
+
+/* Title Link Styling */
+.title-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.title-link:hover {
+    color: #f0f0f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo-text,
+    .aperitive-title,
+    .felprincipal-title,
+    .deserturi-title,
+    .meniu-title,
+    .contact-title {
+        font-size: 3rem;
+    }
+
+    button,
+    .back-button {
+        width: 100%;
+        max-width: 300px;
+        font-size: 1.2rem;
+    }
+
+    .aperitive-name,
+    .felprincipal-name,
+    .deserturi-name,
+    .contact-phone {
+        font-size: 1.2rem;
+    }
+
+    .divider {
+        width: 90%;
+    }
+}
