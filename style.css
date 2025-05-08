@@ -46,6 +46,13 @@ button,
     text-align: center;
     margin: 10px auto;
     display: block;
+    text-decoration: none; /* ✅ removes underline */
+}
+
+/* Remove underline on anchor inside buttons */
+.frontpage-buttons a,
+.meniu-buttons a {
+    text-decoration: none;
 }
 
 button:hover,
