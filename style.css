@@ -23,9 +23,9 @@ html, body {
 .deserturi-title,
 .meniu-title,
 .contact-title {
-    font-size: 6rem; /* Increased font size */
+    font-size: 6rem;
     color: white;
-    margin: 20px 0;
+    margin: 50px 0 20px 0;
 }
 
 /* Button Styles */
@@ -34,38 +34,19 @@ button,
 .meniu-buttons a button,
 .back-button {
     font-family: inherit;
-    font-size: 1.8rem; /* Increased font size */
-    padding: 20px 40px; /* Increased padding */
+    font-size: 1.8rem;
+    padding: 20px 40px;
     border: 2px solid white;
     background-color: transparent;
     color: white;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-    width: 250px; /* Increased width from 200px to 250px */
+    width: 250px;
     text-align: center;
     margin: 10px auto;
     display: block;
     text-decoration: none;
-}
-
-/* Optional link-button alternative */
-.button-link {
-    display: inline-block;
-    padding: 20px 40px; /* Increased padding */
-    border: 2px solid white;
-    color: white;
-    font-size: 1.8rem; /* Increased font size */
-    font-family: 'Dancing Script', 'Cursive', 'Georgia', serif;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 10px auto;
-    width: 250px; /* Increased width from 200px to 250px */
-}
-.button-link:hover {
-    background-color: white;
-    color: black;
 }
 
 button:hover,
@@ -76,16 +57,6 @@ button:hover,
     color: black;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    button,
-    .back-button,
-    .button-link {
-        width: 100%;
-        max-width: 350px; /* Increased max-width from 300px to 350px */
-        font-size: 1.5rem; /* Increased font size for mobile */
-    }
-}
 /* Remove underline + inherit styles on links inside buttons */
 .frontpage-buttons a,
 .meniu-buttons a,
@@ -99,52 +70,38 @@ a.button-link {
 /* Optional link-button alternative */
 .button-link {
     display: inline-block;
-    padding: 20px 40px; /* Increased padding */
+    padding: 20px 40px;
     border: 2px solid white;
     color: white;
-    font-size: 1.8rem; /* Increased font size */
+    font-size: 1.8rem;
     font-family: 'Dancing Script', 'Cursive', 'Georgia', serif;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
     margin: 10px auto;
-    width: 200px;
+    width: 250px;
 }
 .button-link:hover {
     background-color: white;
     color: black;
 }
 
-button:hover,
-.frontpage-buttons a button:hover,
-.meniu-buttons a button:hover,
-.back-button:hover {
-    background-color: white;
-    color: black;
-}
-
-/* Universal Page Container Centering */
-.frontpage,
-.meniu-page,
-.aperitive-page,
-.felprincipal-page,
-.deserturi-page,
-.contact-page {
+/* Frontpage container */
+.frontpage {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
-
-/* Frontpage Specific Layout */
-.frontpage {
-    min-height: 100vh;
     justify-content: center;
     gap: 50px;
+}
+
+/* Frontpage buttons side by side on desktop */
+.frontpage-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
 }
 
 /* Meniu Buttons */
@@ -195,7 +152,7 @@ button:hover,
 .felprincipal-name,
 .deserturi-name,
 .contact-phone {
-    font-size: 2rem; /* Increased font size */
+    font-size: 2rem;
     margin-top: 10px;
     color: white;
 }
@@ -218,6 +175,16 @@ button:hover,
     color: #f0f0f0;
 }
 
+/* Video Styling */
+.rounded-video {
+    border-radius: 50px;
+    width: 300px;
+    max-width: 90vw;
+    display: block;
+    margin: 50px auto 0 auto;
+    padding-bottom: 40px;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .logo-text,
@@ -226,26 +193,38 @@ button:hover,
     .deserturi-title,
     .meniu-title,
     .contact-title {
-        font-size: 5rem; /* Even bigger font size for mobile */
+        font-size: 5rem;
     }
 
     button,
     .back-button,
     .button-link {
         width: 100%;
-        max-width: 200px;
-        font-size: 2rem; /* Even bigger font size for mobile */
+        max-width: 350px;
+        font-size: 2rem;
     }
 
     .aperitive-name,
     .felprincipal-name,
     .deserturi-name,
     .contact-phone {
-        font-size: 2.2rem; /* Even bigger font size for mobile */
+        font-size: 2.2rem;
     }
 
     .divider {
         width: 90%;
+    }
+
+    /* Stack frontpage buttons vertically on mobile */
+    .frontpage-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .rounded-video {
+        width: 100%;
+        max-width: 100vw;
+        height: auto;
     }
 }
 /* Video Styling*/
