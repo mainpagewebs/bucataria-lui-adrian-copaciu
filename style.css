@@ -233,7 +233,7 @@ button:hover,
     .back-button,
     .button-link {
         width: 100%;
-        max-width: 250px;
+        max-width: 200px;
         font-size: 2rem; /* Even bigger font size for mobile */
     }
 
