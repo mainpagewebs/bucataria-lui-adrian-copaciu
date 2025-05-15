@@ -248,3 +248,12 @@ button:hover,
         width: 90%;
     }
 }
+/* Video Styling*/
+.rounded-video {
+    border-radius: 5000px;
+    height: 500px;
+    max-width: 90vw;
+    display: block;
+    margin: 50px auto 0 auto;
+    padding-bottom: 40px; /* Added padding below the video */
+}
