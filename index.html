@@ -9,7 +9,19 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        preloader.classList.add('preloader-hide');
+        setTimeout(() => preloader.style.display = 'none', 500);
+    }, 1500);
+});
+</script>
 <body>
+<div id="preloader">
+  <img src="favicon.ico" alt="Loading..." id="preloader-img">
+</div>
 
   <!-- Simplified Front Page -->
   <div class="frontpage">
@@ -20,6 +32,7 @@
       <a href="meniu.html"><button>Meniu</button></a>
       <a href="Contactaţi-ne.html"><button>Contactați-ne</button></a>
     </div>
-  </div>
+  <!-- Video at the bottom of the page -->
+  <video src="video.MP4" loop autoplay muted playsinline class="rounded-video" style="width:100%;max-width:600px;display:block;margin:40px auto 0 auto;"></video>
 </body>
 </html>
