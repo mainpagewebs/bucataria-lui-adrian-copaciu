@@ -8,7 +8,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script>
+window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+        const preloader = document.getElementById('preloader');
+        preloader.classList.add('preloader-hide');
+        setTimeout(() => preloader.style.display = 'none', 500);
+    }, 1500);
+});
+</script>
 <body>
+<div id="preloader">
+  <img src="favicon.ico" alt="Loading..." id="preloader-img">
+</div>
 
   <!-- Aperitive Page -->
   <div class="aperitive-page">
@@ -20,35 +32,42 @@
     <hr class="divider"> <!-- Divider below the title -->
 
     <!-- Image Section -->
-    <div class="aperitive-images">
-      <!-- First Row with 3 Images -->
-      <div class="aperitive-row">
-        <div class="aperitive-item">
-          <img src="Platou cu aperitive asortate (1).png" alt="Platou cu aperitive asortate">
-          <h2 class="aperitive-name">Platou cu aperitive asortate #1</h2>
-        </div>
-        <div class="aperitive-item">
-          <img src="Platou cu aperitive asortate (2).png" alt="Platou cu aperitive diverse">
-          <h2 class="aperitive-name">Platou cu aperitive asortate #2</h2>
-        </div>
-        <div class="aperitive-item">
-          <img src="Platou cu aperitive asortate (3).png" alt="Platou cu aperitive speciale">
-          <h2 class="aperitive-name">Platou cu aperitive asortate #3</h2>
-        </div>
-      </div>
-
-      <!-- Second Row with 1 Image -->
-      <div class="aperitive-row">
-        <div class="aperitive-item">
-          <img src="Pățeuri cu brânză Și pateuri cu ciuperci.png" alt="Platou cu aperitive unice">
-          <h2 class="aperitive-name">Pățeuri cu brânză și pateuri cu ciuperci</h2>
-        </div>
-      </div>
+<!-- ...existing code above... -->
+<div class="aperitive-images">
+  <!-- First Row with 2 Images -->
+  <div class="aperitive-row">
+    <div class="aperitive-item">
+      <img src="Platou cu aperitive asortate (1).png" alt="Platou cu aperitive asortate">
+      <h2 class="aperitive-name">Platou cu aperitive asortate #1</h2>
     </div>
+    <div class="aperitive-item">
+      <img src="Platou cu aperitive asortate (2).png" alt="Platou cu aperitive diverse">
+      <h2 class="aperitive-name">Platou cu aperitive asortate #2</h2>
+    </div>
+  </div>
+  <!-- Second Row with 2 Images -->
+  <div class="aperitive-row">
+    <div class="aperitive-item">
+      <img src="Platou cu aperitive asortate (3).png" alt="Platou cu aperitive speciale">
+      <h2 class="aperitive-name">Platou cu aperitive asortate #3</h2>
+    </div>
+    <div class="aperitive-item">
+      <img src="Platou cu aperitive asortate (4).png" alt="Platou cu aperitive speciale">
+      <h2 class="aperitive-name">Platou cu aperitive asortate #4</h2>
+    </div>
+  </div>
+  <!-- Third Row with 1 Image -->
+  <div class="aperitive-row">
+    <div class="aperitive-item">
+      <img src="Pățeuri cu brânză Și pateuri cu ciuperci.png" alt="Platou cu aperitive unice">
+      <h2 class="aperitive-name">Pățeuri cu brânză și pateuri cu ciuperci</h2>
+    </div>
+  </div>
+</div>
+<!-- ...existing code below... -->
 
     <hr class="divider"> <!-- Divider above the button -->
     <a href="meniu.html" class="back-button">Înapoi la Meniu</a>
   </div>
-
 </body>
 </html>
