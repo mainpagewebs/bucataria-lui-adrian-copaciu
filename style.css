@@ -10,7 +10,6 @@ html, body {
     background-attachment: scroll;
     color: white;
     min-height: 100vh;
-    height: auto;
     overflow-x: hidden;
     overflow-y: auto;
     text-align: center;
@@ -28,11 +27,10 @@ html, body {
     margin: 50px 0 20px 0;
 }
 
-/* Button Styles */
+/* Buttons */
 button,
-.frontpage-buttons a button,
-.meniu-buttons a button,
-.back-button {
+.back-button,
+.button-link {
     font-family: inherit;
     font-size: 1.8rem;
     padding: 20px 40px;
@@ -49,44 +47,15 @@ button,
     text-decoration: none;
 }
 
-/* Remove underline + inherit styles on links inside buttons */
-.frontpage-buttons a,
-.meniu-buttons a,
-.back-button a,
-a.button-link {
-    text-decoration: none;
-    color: inherit;
-    font: inherit;
-}
-
-/* Optional link-button alternative */
-.button-link {
-    display: inline-block;
-    padding: 15px 30px;
-    border: 2px solid white;
-    color: white;
-    font-size: 1.5rem;
-    font-family: 'Dancing Script', 'Cursive', 'Georgia', serif;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 10px auto;
-    width: 200px;
-}
-.button-link:hover {
-    background-color: white;
-    color: black;
-}
-
 button:hover,
-.frontpage-buttons a button:hover,
-.meniu-buttons a button:hover,
-.back-button:hover {
+.back-button:hover,
+.button-link:hover {
     background-color: white;
     color: black;
 }
 
-/* Remove underline + inherit styles on links inside buttons */
+/* Link Styling */
+.title-link,
 .frontpage-buttons a,
 .meniu-buttons a,
 .back-button a,
@@ -96,26 +65,7 @@ a.button-link {
     font: inherit;
 }
 
-/* Optional link-button alternative */
-.button-link {
-    display: inline-block;
-    padding: 20px 40px;
-    border: 2px solid white;
-    color: white;
-    font-size: 1.8rem;
-    font-family: 'Dancing Script', 'Cursive', 'Georgia', serif;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    margin: 10px auto;
-    width: 250px;
-}
-.button-link:hover {
-    background-color: white;
-    color: black;
-}
-
-/* Frontpage container */
+/* Frontpage Layout */
 .frontpage {
     min-height: 100vh;
     display: flex;
@@ -125,7 +75,6 @@ a.button-link {
     gap: 50px;
 }
 
-/* Frontpage buttons side by side on desktop */
 .frontpage-buttons {
     display: flex;
     flex-direction: row;
@@ -133,7 +82,6 @@ a.button-link {
     gap: 30px;
 }
 
-/* Meniu Buttons */
 .meniu-buttons {
     display: flex;
     flex-direction: column;
@@ -153,7 +101,7 @@ a.button-link {
     width: 100%;
 }
 
-/* Row Containers */
+/* Image Rows */
 .aperitive-row,
 .felprincipal-row,
 .deserturi-row {
@@ -165,7 +113,7 @@ a.button-link {
     width: 100%;
 }
 
-/* Unified Image Styling (same size for all) */
+/* Image Styling */
 .aperitive-item img,
 .felprincipal-item img,
 .deserturi-item img {
@@ -176,7 +124,7 @@ a.button-link {
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
 }
 
-/* Item Names */
+/* Captions */
 .aperitive-name,
 .felprincipal-name,
 .deserturi-name,
@@ -186,7 +134,7 @@ a.button-link {
     color: white;
 }
 
-/* Divider Line */
+/* Divider */
 .divider {
     border: none;
     border-top: 2px solid white;
@@ -194,20 +142,10 @@ a.button-link {
     margin: 50px auto;
 }
 
-/* Title Link Styling */
-.title-link {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.3s ease;
-}
-.title-link:hover {
-    color: #f0f0f0;
-}
-
-/* Video Styling */
+/* Rounded Video Styling */
 .rounded-video {
-    border-radius: 50px;
-    width: 300px;
+    border-radius: 5000px;
+    height: 500px;
     max-width: 90vw;
     display: block;
     margin: 50px auto 0 auto;
@@ -244,7 +182,6 @@ a.button-link {
         width: 90%;
     }
 
-    /* Stack frontpage buttons vertically on mobile */
     .frontpage-buttons {
         flex-direction: column;
         gap: 20px;
@@ -252,16 +189,6 @@ a.button-link {
 
     .rounded-video {
         width: 100%;
-        max-width: 100vw;
         height: auto;
     }
-}
-/* Video Styling*/
-.rounded-video {
-    border-radius: 5000px;
-    height: 500px;
-    max-width: 90vw;
-    display: block;
-    margin: 50px auto 0 auto;
-    padding-bottom: 40px; /* Added padding below the video */
 }
